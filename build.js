@@ -33,3 +33,26 @@ if(buildCordova) {
   buildPromise.then(stealCordova.build).then(stealCordova.ios.emulate);
 }
 // options added by `donejs add cordova` - END
+// options added by `donejs add electron` - START
+var electronOptions = {
+  main: "electron-main.js",
+  buildDir: "./build",
+  platforms: ["darwin"],
+  archs: ["x64"],
+  glob: [
+    "package.json",
+    "production.html",
+    "node_modules/steal/steal.production.js"
+  ]
+};
+
+var stealElectron = require("steal-electron");
+
+if(buildElectron) {
+  buildPromise = buildPromise.then(function(buildResult){
+    return stealElectron(electronOptions, buildResult);
+  }).catch(function(err) {
+    console.log(err);
+  });
+}
+// options added by `donejs add electron` - END

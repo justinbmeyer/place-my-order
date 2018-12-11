@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "firebase": "three-pmo",
+    "public": "./dist",
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ]
+  }
+}

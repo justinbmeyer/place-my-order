@@ -18,9 +18,11 @@
     "test": "testee test.html --browsers firefox --reporter Spec",
     "start": "done-serve --proxy http://localhost:7070 --port 8080",
     "develop": "done-serve --develop --proxy http://localhost:7070 --port 8080",
-    "build": "node build"
+    "build": "node build",
+    "deploy": "firebase deploy",
+    "deploy:ci": "firebase deploy --token \"$FIREBASE_TOKEN\""
   },
-  "main": "place-my-order/index.stache!done-autorender",
+  "main": "electron-main.js",
   "files": [
     "src"
   ],
@@ -46,9 +48,12 @@
     ],
     "envs": {
       "server-production": {
-        "renderingBaseURL": "/dist"
+        "renderingBaseURL": "https://three-pmo.firebaseapp.com/"
       },
       "cordova-production": {
+        "serviceBaseURL": "http://www.place-my-order.com"
+      },
+      "electron-production": {
         "serviceBaseURL": "http://www.place-my-order.com"
       }
     },
@@ -69,6 +74,9 @@
     "done-css": "^3.0.2",
     "done-serve": "^3.0.0",
     "donejs-cordova": "^2.0.1",
+    "donejs-electron": "^2.0.0",
+    "donejs-firebase": "^1.0.1",
+    "donejs-heroku": "^1.0.0",
     "donejs-travis": "^1.0.0",
     "generator-donejs": "^3.0.0",
     "place-my-order-api": "^1.0.1",
@@ -82,9 +90,12 @@
     "can-debug": "^2.0.1",
     "can-route-hash": "^1.0.1",
     "donejs-cli": "^3.0.0-pre.5",
+    "electron": "^1.7.10",
+    "firebase-tools": "^6.1.2",
     "funcunit": "^3.6.1",
     "steal-conditional": "^1.0.0",
     "steal-cordova": "^1.0.2",
+    "steal-electron": "^1.1.1",
     "steal-qunit": "^1.0.1",
     "steal-tools": "^2.0.9",
     "testee": "^0.8.1"
