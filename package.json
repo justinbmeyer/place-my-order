@@ -47,6 +47,9 @@
     "envs": {
       "server-production": {
         "renderingBaseURL": "/dist"
+      },
+      "cordova-production": {
+        "serviceBaseURL": "http://www.place-my-order.com"
       }
     },
     "serviceBaseURL": "",
@@ -56,6 +59,7 @@
     ]
   },
   "dependencies": {
+    "bit-tabs": "^2.0.1",
     "can": "^5.16.0",
     "can-route-pushstate": "^5.0.7",
     "can-stache-route-helpers": "^1.1.1",
@@ -64,12 +68,14 @@
     "done-component": "^2.2.0",
     "done-css": "^3.0.2",
     "done-serve": "^3.0.0",
+    "donejs-cordova": "^2.0.1",
     "donejs-travis": "^1.0.0",
     "generator-donejs": "^3.0.0",
     "place-my-order-api": "^1.0.1",
     "place-my-order-assets": "^0.1.7",
     "steal": "^2.1.6",
     "steal-less": "^1.2.2",
+    "steal-socket.io": "^4.2.0",
     "steal-stache": "^4.1.2"
   },
   "devDependencies": {
@@ -78,6 +84,7 @@
     "donejs-cli": "^3.0.0-pre.5",
     "funcunit": "^3.6.1",
     "steal-conditional": "^1.0.0",
+    "steal-cordova": "^1.0.2",
     "steal-qunit": "^1.0.1",
     "steal-tools": "^2.0.9",
     "testee": "^0.8.1"

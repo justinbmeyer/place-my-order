@@ -1,0 +1,10 @@
+{
+  "donejs-cordova": {
+    "name": "place my order",
+    "id": "com.donejs.placemyorder",
+    "platforms": [
+      "ios"
+    ],
+    "baseURL": "http://www.place-my-order.com"
+  }
+}

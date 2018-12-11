@@ -16,7 +16,7 @@
     {{else}}
       <div class="loading"></div>
     {{/if}}
-
+    
 
     {{#eq(this.env.NODE_ENV, "production")}}
       <script src="{{joinBase('steal.production.js')}}"></script>
